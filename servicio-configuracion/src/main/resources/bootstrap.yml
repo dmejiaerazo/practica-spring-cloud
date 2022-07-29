@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dmejiaerazo/practica-spring-cloud.git
+          search-paths:
+            - datos-configuracion
+          username: ${USUARIO_GIT}
+          password: ${PASSWORD_GIT}
+  security:
+    user:
+      name: root
+      password: s3cr3t
+
+
+
