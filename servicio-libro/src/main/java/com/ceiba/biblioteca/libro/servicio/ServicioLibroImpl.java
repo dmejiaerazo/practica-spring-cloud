@@ -28,7 +28,7 @@ public class ServicioLibroImpl implements ServicioLibro{
 
     @Override
     public Libro crear(Libro libro) {
-        var libroBD = obtenerPorId(libro.getId());
+        Libro libroBD = obtenerPorId(libro.getId());
 
         if(libroBD == null){
             return libroRepositorio.save(libro);
